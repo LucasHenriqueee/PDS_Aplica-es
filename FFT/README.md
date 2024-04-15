@@ -32,8 +32,8 @@ else:
 ```
 Se o comprimento da lista x for maior que 1, então o código divide a lista em duas partes:
 
--par: Contendo os elementos de índices pares de x.
--impar: Contendo os elementos de índices ímpares de x.
+par: Contendo os elementos de índices pares de x.
+impar: Contendo os elementos de índices ímpares de x.
 
 A função fft é chamada recursivamente para calcular as transformadas de Fourier das listas par e impar. Isso significa que a função está sendo aplicada em partes menores do problema (metade das amostras) repetidamente até atingir a condição base. Depois que as transformadas de Fourier das partes pares e ímpares são calculadas recursivamente, elas são combinadas para formar a transformada de Fourier completa da lista original x. Isso é feito usando os fatores de rotação apropriados Wn e a propriedade da Transformada Rápida de Fourier (FFT) que permite combinar as transformadas de maneira eficiente.
 O resultado final é retornado como a concatenação das transformadas parciais combinadas.
